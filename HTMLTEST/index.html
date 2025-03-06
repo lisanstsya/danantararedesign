@@ -5,8 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DANANTARA REDESIGN</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {},
+            },
+            safelist: [
+                "text-3xl", "font-bold", "text-blue-500",
+                "bg-gray-100", "p-8", "text-gray-700"
+            ]
+        };
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
     <style>
+
+        @layer utilities {
+            .text-3xl { font-size: 1.875rem; font-weight: bold; }
+            .font-bold { font-weight: 700; }
+            .text-blue-500 { color: #3b82f6; }
+            .bg-gray-100 { background-color: #f3f4f6; }
+            .p-8 { padding: 2rem; }
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             opacity: 0;
@@ -61,7 +81,6 @@
         <img src="Assets/Danantara_Indonesia.png" alt="Logo Pemerintah" class="h-12 mr-4">
     </header>
     <style>
-        /* Efek transisi fade */
         body {
             transition: opacity 0.5s ease-in-out;
         }
